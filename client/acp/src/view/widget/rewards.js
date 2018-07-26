@@ -20,7 +20,7 @@ class Rewards extends React.Component {
         if (this.props.grants.length === 0) {
             return (
                 <span
-                    className="empty-section-message">Activity is empty. Give some awards to see an activity.
+                    className="empty-section-message">Sekcja jest pusta. Tu pojawią się rozdane nagrody.
             </span>
             );
         }

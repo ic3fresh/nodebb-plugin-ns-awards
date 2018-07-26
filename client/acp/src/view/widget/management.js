@@ -32,16 +32,16 @@ class Management extends React.Component {
         return (
             <div className="management">
                 <p className="section-hint">
-                    Manage every award which user has been received previously.
+                    Zarządzaj wszystkimi odznakami otrzymanymi przez użytkownika.
                 </p>
-                <h5>Select User:</h5>
+                <h5>Wybierz użytkownika:</h5>
                 <UserSearch
                     focus={this.props.userSearchFocused}
                     focusDidChange={state => this.props.setFocus(state)}
                     highlight={this.props.userHighlight}
                     optionDidSelect={option => this.props.select(option)}
                     options={this.props.users}
-                    placeholder="Enter Username"
+                    placeholder="Wpisz nazwę użytkownika"
                     selectionWillChange={direction => this.props.highlight(direction)}
                     value={this.props.username}
                     valueDidChange={text => this.props.changeUsername(text)}

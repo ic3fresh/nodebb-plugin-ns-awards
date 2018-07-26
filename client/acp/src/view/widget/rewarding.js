@@ -41,39 +41,39 @@ class Rewarding extends React.Component {
         return (
             <div className="rewarding">
                 <div className="rewarding__awards">
-                    <h5>Pick Award:</h5>
+                    <h5>Wybierz nagrodę:</h5>
                     <AwardPicker
                         awardForGrant={this.props.awardForGrant}
                         awards={this.props.awards}
                         itemDidSelect={award => this.props.selectAward(award)}/>
                 </div>
                 <div className="rewarding__details">
-                    <h5>Select Users:</h5>
+                    <h5>Wybierz użytkowników:</h5>
                     <UserSearch
                         focus={this.props.userSearchFocused}
                         focusDidChange={state => this.props.setFocus(state)}
                         highlight={this.props.userHighlight}
                         optionDidSelect={option => this.props.select(option)}
                         options={this.props.users}
-                        placeholder="Enter Username"
+                        placeholder="Wpisz nazwę użytkownika"
                         selectionWillChange={direction => this.props.highlight(direction)}
                         value={this.props.username}
                         valueDidChange={text => this.props.changeUsername(text)}
                         valueWillReset={() => this.props.resetUsername()}/>
                     <UserSelectList/>
                     <div className="form-group rewarding__reason">
-                        <label htmlFor="grantReason">Reason</label>
+                        <label htmlFor="grantReason">Powód</label>
                         <textarea
                             className="form-control"
                             rows="4"
                             id="grantReason"
-                            placeholder="Enter the reason. Reason text is public and can not be edited."
+                            placeholder="Wpisz powód. Tekst będzie wyświetlany publicznie, a jego edycja nie będzie możliwa."
                             onChange={e => this.props.setReason(e.target.value)}
                             value={this.props.grantReason || ''}/>
                     </div>
                     <PanelControls
                         disableCancel={true}
-                        labelSuccess="Reward"
+                        labelSuccess="Nagródź"
                         valid={this.props.awardGrantValid}
                         successDidClick={() => this.props.grant()}/>
                 </div>

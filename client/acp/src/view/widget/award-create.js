@@ -13,8 +13,8 @@ class AwardCreate extends React.Component {
         return (
             (this.props.creationActive) ? <NewAwardForm />
                 : <PromptView
-                label="Create Award..."
-                hint="Give short and clear names for awards, treat them like medals, for example: 'Four-Way Medal' or 'Miss Universe'"
+                label="Utwórz odznakę..."
+                hint="Nadawaj odznakom jasne i zwięzłe nazwy, myśl o nich jak o orderach, np. „Order Podwiązki”, czy tytułach, np. „Miss Świata”."
                 labelDidClick={() => this.props.activateForm()}/>
         );
     }

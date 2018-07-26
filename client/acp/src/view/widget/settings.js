@@ -21,28 +21,26 @@ class Settings extends React.Component {
                 <div className="row">
                     <div className="col-md-6">
                         <div className="form-group">
-                            <label htmlFor="maxRewardsPerAccount">Max Rewards Per Account</label>
+                            <label htmlFor="maxRewardsPerAccount">Maksymalna liczba odznak na stronie profilu</label>
                             <input
                                 className="form-control"
                                 type="text"
                                 id="maxRewardsPerAccount"
                                 onChange={e => this.props.changeField(SettingFields.MAX_REWARDS_PER_ACCOUNT, e.target.value)}
                                 value={this.props.settings[SettingFields.MAX_REWARDS_PER_ACCOUNT]}/>
-                            <p className="help-block">A number of rewards to inject in an account. Specify -1 to remove
-                                a limit, or 0 to disable a feature.</p>
+                            <p className="help-block">Liczba odznak wyświetlana na stronie profilu. Wpisz -1, żeby usunąć limit, lub 0 żeby wyłączyć.</p>
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="form-group">
-                            <label htmlFor="maxRewardsPerPost">Max Rewards Per Post</label>
+                            <label htmlFor="maxRewardsPerPost">Maksymalna liczba odznak na stronie tematu</label>
                             <input
                                 className="form-control"
                                 type="text"
                                 id="maxRewardsPerPost"
                                 onChange={e => this.props.changeField(SettingFields.MAX_REWARDS_PER_POST, e.target.value)}
                                 value={this.props.settings[SettingFields.MAX_REWARDS_PER_POST]}/>
-                            <p className="help-block">A number of rewards to inject in a post. Specify -1 to remove a
-                                limit, or 0 to disable a feature.</p>
+                            <p className="help-block">Liczba odznak wyświetlana na stronie tematu. Wpisz -1, żeby usunąć limit, lub 0 żeby wyłączyć.</p>
                         </div>
                     </div>
                 </div>
@@ -50,14 +48,14 @@ class Settings extends React.Component {
                 <div className="row">
                     <div className="col-md-6">
                         <div className="form-group">
-                            <label htmlFor="activityLimit">Activity Limit</label>
+                            <label htmlFor="activityLimit">Limit aktywności</label>
                             <input
                                 className="form-control"
                                 type="text"
                                 id="activityLimit"
                                 onChange={e => this.props.changeField(SettingFields.ACTIVITY_LIMIT, e.target.value)}
                                 value={this.props.settings[SettingFields.ACTIVITY_LIMIT]}/>
-                            <p className="help-block">A number of records to process in the Rewards section.</p>
+                            <p className="help-block">Liczba rekordów przetwarzana w sekcji Odznaki</p>
                         </div>
                     </div>
                     <div className="col-md-6">
@@ -67,7 +65,7 @@ class Settings extends React.Component {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="form-group">
-                            <label htmlFor="notificationText">Notification Text</label>
+                            <label htmlFor="notificationText">Tekst powiadomienia</label>
                             <textarea
                                 className="form-control"
                                 rows="2"
@@ -75,15 +73,14 @@ class Settings extends React.Component {
                                 id="notificationText"
                                 onChange={e => this.props.changeField(SettingFields.NOTIFICATION_TEXT, e.target.value)}
                                 value={this.props.settings[SettingFields.NOTIFICATION_TEXT]}/>
-                            <p className="help-block">A text for notification when a user is rewarded. Text supports
-                                replacement tokens: %AWARD_NAME% - name of the award;</p>
+                            <p className="help-block">Tekst powiadomienia o przyznaniu użytkownikowi nagrody. Tekst zawiera zamienne tokeny: %AWARD_NAME% – nazwa nagrody.</p>
                         </div>
                     </div>
                 </div>
 
                 <PanelControls
                     disableCancel={true}
-                    labelSuccess="Save"
+                    labelSuccess="Zapisz"
                     valid={true}
                     successDidClick={() => this.props.save()}/>
 
