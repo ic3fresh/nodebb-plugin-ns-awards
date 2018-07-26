@@ -24,7 +24,7 @@ class AwardsListView extends React.Component {
         }
 
         if (this.props.awards.length === 0) {
-            items = <li>You don't have any awards. Why not create a new one?</li>;
+            items = <li>Nie masz żadnych odznak. Może utworzysz nową?</li>;
         } else {
             items = this.props.awards.map(award => {
                 let aid = createAwardUid(award.aid);

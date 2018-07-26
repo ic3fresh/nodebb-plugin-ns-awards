@@ -12,7 +12,7 @@ class UserSelectList extends React.Component {
 
         if (this.props.usersForGrant.length === 0) {
             items = <div className="alert alert-info" role="alert">
-                0 users are selected for rewarding
+                Żaden użytkownik nie został wybrany
             </div>;
         } else {
             items = this.props.usersForGrant.map(user => {

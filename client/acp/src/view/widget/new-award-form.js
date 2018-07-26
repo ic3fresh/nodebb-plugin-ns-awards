@@ -31,20 +31,20 @@ class NewAwardForm extends React.Component {
     render() {
         return (
             <div className="award-form">
-                <h4>Create Award</h4>
+                <h4>Utwórz odznakę</h4>
 
                 <div className="form-group">
-                    <label htmlFor="awardName">Name</label>
+                    <label htmlFor="awardName">Nazwa</label>
                     <input
                         className="form-control"
                         type="text"
                         id="awardName"
-                        placeholder="Enter name, ex: 'Good Conduct Medal'"
+                        placeholder="Wpisz nazwę, np. „Medal za wzorowy przebieg służby”"
                         onChange={e => this.props.setName(e.target.value)}
                         value={this.props.name || ''}/>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="awardImage">Image</label>
+                    <label htmlFor="awardImage">Ikona</label>
                     <div className="award-form__image">
                         <ImageManager
                             entityId={Constants.NEW_AWARD_ID}
@@ -55,17 +55,17 @@ class NewAwardForm extends React.Component {
                     </div>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="awardDesc">Description</label>
+                    <label htmlFor="awardDesc">Opis</label>
                     <textarea
                         className="form-control"
                         rows="4"
                         id="awardDesc"
-                        placeholder="Enter full description, ex: 'The Good Conduct Medal is one of the oldest military awards of the United States Armed Forces.'"
+                        placeholder="Wpisz pełen opis, np.: „Medal za wzorowy przebieg służby należy do najstarszych odznaczeń amerykańskich sił zbrojnych”."
                         onChange={e => this.props.setDescription(e.target.value)}
                         value={this.props.description || ''}/>
                 </div>
                 <PanelControls
-                    labelSuccess="Create"
+                    labelSuccess="Utwórz"
                     valid={this.isValid()}
                     cancelDidClick={this.props.cancel}
                     successDidClick={() => this.props.createAward(

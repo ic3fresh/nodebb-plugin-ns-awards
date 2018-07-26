@@ -16,7 +16,7 @@ class GrantsList extends React.Component {
         }
 
         if (this.props.userInspectGrants.length === 0) {
-            items = <div>The user did not receive any awards. Maybe it's time to grant some awards?</div>;
+            items = <div>Użytkownik nie otrzymał żadnych odznak. Może czas przyznać jakieś odznaki?</div>;
         } else {
             items = this.props.userInspectGrants.map(grant => {
                 return (
