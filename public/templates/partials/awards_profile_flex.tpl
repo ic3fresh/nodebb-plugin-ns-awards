@@ -3,7 +3,7 @@
 
     <!-- BEGIN nsRewards -->
             <div class="ns-awards-profile__image">
-                <img title class="teaser-pic img-responsive" src="{nsRewards.award.url}" data-original-title="{nsRewards.award.name}"/>
+                <img title="{nsRewards.award.name}" class="teaser-pic img-responsive" src="{nsRewards.award.url}" data-original-title="{nsRewards.award.name}"/>
             </div>
     <!-- END nsRewards -->
 
